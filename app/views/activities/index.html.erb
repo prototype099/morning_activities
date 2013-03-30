@@ -1,0 +1,35 @@
+<h1>Listing activities</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Organizer</th>
+    <th>Media</th>
+    <th>Main url</th>
+    <th>Sub url</th>
+    <th>Memo</th>
+    <th>Disable</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <tr>
+    <td><%= activity.title %></td>
+    <td><%= activity.organizer_id %></td>
+    <td><%= activity.media %></td>
+    <td><%= activity.main_url %></td>
+    <td><%= activity.sub_url %></td>
+    <td><%= activity.memo %></td>
+    <td><%= activity.disable %></td>
+    <td><%= link_to 'Show', activity %></td>
+    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+    <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Activity', new_activity_path %>

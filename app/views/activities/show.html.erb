@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @activity.title %>
+</p>
+
+<p>
+  <b>Organizer:</b>
+  <%= @activity.organizer_id %>
+</p>
+
+<p>
+  <b>Media:</b>
+  <%= @activity.media %>
+</p>
+
+<p>
+  <b>Main url:</b>
+  <%= @activity.main_url %>
+</p>
+
+<p>
+  <b>Sub url:</b>
+  <%= @activity.sub_url %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @activity.memo %>
+</p>
+
+<p>
+  <b>Disable:</b>
+  <%= @activity.disable %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>
